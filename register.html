@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Club | Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Register for Our Cricket Club</h1>
+        <p>Join us and become part of the team!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html" class="active">Register</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            <p>Fill in the form below to register for a cricket club event.</p>
+
+            <form id="registrationForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName"
+                               required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="email">University Email:</label>
+                        <input type="email" id="email" name="email"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone"
+                               pattern="[0-9]{11}"
+                               placeholder="03001234567" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event Information</legend>
+
+                    <p>
+                        <label for="event">Choose an Event:</label>
+                        <select id="event" name="event" required>
+                            <option value="">-- Select an Event --</option>
+                            <option value="University Cricket Tournament">
+                                University Cricket Tournament
+                            </option>
+                            <option value="Friendly Cricket Match">
+                                Friendly Cricket Match
+                            </option>
+                            <option value="Cricket Training Camp">
+                                Cricket Training Camp
+                            </option>
+                            <option value="Club Selection Trials">
+                                Club Selection Trials
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>How did you hear about our club?</p>
+
+                    <label>
+                        <input type="radio" name="source" value="Friend" required>
+                        Friend
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="Social Media">
+                        Social Media
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="University">
+                        University
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section>
+            <h2>Saved Registrations</h2>
+
+            <ul id="registrationList">
+                <li>No registrations yet.</li>
+            </ul>
+
+            <button type="button" id="clearRegistrations">
+                Clear All Registrations
+            </button>
+        </section>
+
+        <section>
+            <h2>More Information</h2>
+            <p>
+                Visit the
+                <a href="https://www.icc-cricket.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    official ICC Cricket website
+                </a>
+                to learn more about cricket.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 University Cricket Club</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
