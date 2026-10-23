@@ -12,7 +12,7 @@ Open index.html in a web browser.
 
 ## Home Page Screenshot
 
-![Home Page](images/home-desktop.png)
+![Home Page](images/website%20desktop%20homepage%20view.png)
 
 ## Live Website
 https://raza-ahmad-hassan.github.io/CIT331-Assignment1-Raza-Ahmad-24l-0006-/
