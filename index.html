@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Club | Home</title>
+    <meta name="description" content="Welcome to the University Cricket Club. Explore cricket events, tournaments, and activities for university students.">
+    <title>University Cricket Club | Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,40 +14,64 @@
         <p>Play Together, Grow Together!</p>
     </header>
 
-    <nav>
-        <a href="index.html" class="active">Home</a>
+    <nav aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="events.html">Events</a>
         <a href="register.html">Register</a>
     </nav>
 
     <main>
-        <section>
-            <h2>Welcome to Our Cricket Club</h2>
-            <p>We bring university students together through cricket, teamwork, and sports activities.</p>
+        <section aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Welcome to Our Cricket Club</h2>
+            <p>
+                We bring university students together through cricket,
+                teamwork, and sports activities.
+            </p>
+            <p>
+                Whether you enjoy playing cricket or learning new skills,
+                our club provides opportunities to participate and connect.
+            </p>
+            <a href="register.html">Join Our Club</a>
         </section>
 
-        <section>
-            <h2>Featured Upcoming Event</h2>
+        <section aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Upcoming Event</h2>
+
             <article>
                 <h3>University Cricket Tournament</h3>
-                <p>Join us for an exciting cricket tournament and show your skills.</p>
-                <p>Date: <time datetime="2026-11-15">15 November 2026</time></p>
+                <p>
+                    Join us for an exciting cricket tournament
+                    and show your skills.
+                </p>
+                <p>
+                    Date:
+                    <time datetime="2026-11-15">15 November 2026</time>
+                </p>
                 <p>Location: University Cricket Ground</p>
                 <a href="events.html">View All Events</a>
             </article>
         </section>
 
-        <section>
-            <h2>Our Club</h2>
+        <section aria-labelledby="club-heading">
+            <h2 id="club-heading">Our Club</h2>
+
             <figure>
-                <img src="images/cricket.jpg" alt="Students playing cricket">
-                <figcaption>Cricket brings students together.</figcaption>
+                <img src="images/cricket.jpg"
+                     alt="Students playing cricket together"
+                     loading="lazy">
+                <figcaption>
+                    Cricket brings students together through teamwork and sports.
+                </figcaption>
             </figure>
         </section>
 
-        <aside>
-            <h2>Contact the Club</h2>
-            <p>Contact the club committee for event information.</p>
+        <aside aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact the Club</h2>
+            <p>
+                Contact the club committee for information about
+                upcoming events and registration.
+            </p>
+            <a href="register.html">Register for an Event</a>
         </aside>
     </main>
 
