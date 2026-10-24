@@ -1,9 +1,10 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for University Cricket Club events, matches, training camps, and selection trials.">
     <title>Cricket Club | Register</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,38 +15,44 @@
         <p>Join us and become part of the team!</p>
     </header>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="events.html">Events</a>
-        <a href="register.html" class="active">Register</a>
+        <a href="register.html" class="active" aria-current="page">Register</a>
     </nav>
 
     <main>
-        <section>
-            <h2>Registration Form</h2>
-            <p>Fill in the form below to register for a cricket club event.</p>
+        <section aria-labelledby="registration-heading">
+            <h2 id="registration-heading">Registration Form</h2>
+            <p id="formHelp">
+                Fill in the form below to register for a cricket club event.
+                All required fields must be completed.
+            </p>
 
-            <form id="registrationForm">
+            <form id="registrationForm" aria-describedby="formHelp">
                 <fieldset>
                     <legend>Personal Information</legend>
 
                     <p>
                         <label for="fullName">Full Name:</label>
                         <input type="text" id="fullName" name="fullName"
-                               required minlength="3">
+                               autocomplete="name" required minlength="3">
                     </p>
 
                     <p>
                         <label for="email">University Email:</label>
                         <input type="email" id="email" name="email"
-                               required>
+                               autocomplete="email" required>
                     </p>
 
                     <p>
                         <label for="phone">Phone Number:</label>
                         <input type="tel" id="phone" name="phone"
+                               autocomplete="tel"
                                pattern="[0-9]{11}"
-                               placeholder="03001234567" required>
+                               placeholder="03001234567"
+                               title="Enter an 11-digit phone number."
+                               required>
                     </p>
                 </fieldset>
 
@@ -71,22 +78,27 @@
                         </select>
                     </p>
 
-                    <p>How did you hear about our club?</p>
+                    <fieldset>
+                        <legend>How did you hear about our club?</legend>
 
-                    <label>
-                        <input type="radio" name="source" value="Friend" required>
-                        Friend
-                    </label>
+                        <p>
+                            <input type="radio" id="sourceFriend"
+                                   name="source" value="Friend" required>
+                            <label for="sourceFriend">Friend</label>
+                        </p>
 
-                    <label>
-                        <input type="radio" name="source" value="Social Media">
-                        Social Media
-                    </label>
+                        <p>
+                            <input type="radio" id="sourceSocial"
+                                   name="source" value="Social Media">
+                            <label for="sourceSocial">Social Media</label>
+                        </p>
 
-                    <label>
-                        <input type="radio" name="source" value="University">
-                        University
-                    </label>
+                        <p>
+                            <input type="radio" id="sourceUniversity"
+                                   name="source" value="University">
+                            <label for="sourceUniversity">University</label>
+                        </p>
+                    </fieldset>
                 </fieldset>
 
                 <button type="submit">Submit Registration</button>
@@ -95,10 +107,10 @@
             <p id="message" role="status" aria-live="polite"></p>
         </section>
 
-        <section>
-            <h2>Saved Registrations</h2>
+        <section aria-labelledby="saved-heading">
+            <h2 id="saved-heading">Saved Registrations</h2>
 
-            <ul id="registrationList">
+            <ul id="registrationList" aria-live="polite">
                 <li>No registrations yet.</li>
             </ul>
 
@@ -107,8 +119,8 @@
             </button>
         </section>
 
-        <section>
-            <h2>More Information</h2>
+        <section aria-labelledby="more-info-heading">
+            <h2 id="more-info-heading">More Information</h2>
             <p>
                 Visit the
                 <a href="https://www.icc-cricket.com/"
@@ -128,3 +140,4 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+```
